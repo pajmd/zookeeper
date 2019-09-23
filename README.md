@@ -5,3 +5,6 @@ The config is for an ensemble running on one single node, to distinguish each se
 * /var/lib/zookeeper/data-n ( n= 1-3)  
 in each data_n folfer add a /var/lib/zookeeper/data-n/myid file containing id (id = 1-3)  
 * ~/apache-zookeeper-3.5.5-bin/conf/zoo-n.cfg ( n= 1-3)  
+
+### env variables
+ZOOKEEPER_HOME=$HOME/apache-zookeeper-3.5.5-bin
