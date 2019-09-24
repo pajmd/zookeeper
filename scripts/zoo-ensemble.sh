@@ -1,14 +1,13 @@
 #!/bin/bash
 
+ZOOKEEPER_BIN=$ZOOKEEPER_HOME/bin
 
 instance_num=3
 
 usage() {
 	cat << EOF
 To start or stop zookeeper:
-
 usage: zoo-ensemble [start|stop|restart]
-
 EOF
 	exit 0
 }
@@ -39,7 +38,7 @@ do
 	do
 		start_time="$(date -u +%s)"
 		echo "server: $i running command: $cmd"
-		./zkServer.sh $cmd zoo-$i.cfg
+		$ZOOKEEPER_BIN/zkServer.sh $cmd zoo-$i.cfg
 		end_time="$(date -u +%s)"
 		elapsed="$(($end_time-$start_time))"
 		echo "$cmd took $elapsed second to execute"
@@ -69,3 +68,4 @@ else
 fi
 
 runCommand $cmd
+
