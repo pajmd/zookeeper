@@ -8,7 +8,9 @@ in each data_n folfer add a /var/lib/zookeeper/data-n/myid file containing id (i
 * ~/apache-zookeeper-3.5.5-bin/conf/zoo-n.cfg ( n= 1-3)  
 
 ### env variables
-In .profile
+In .profile add ZOOKEEPER_HOME  
 ZOOKEEPER_HOME=$HOME/apache-zookeeper-3.5.5-bin  
+```
 export ZOOKEEPER_HOME="$HOME/apache-zookeeper-3.5.5-bin"  
 export SOLR_HOME="$HOME/solr-7.7.2/server/solr"  
+```
